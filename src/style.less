@@ -1,0 +1,139 @@
+.skill-card-group-homepage {
+  // 样式全嵌套在 .skill-card-group-homepage 里面，避免样式污染
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  :global {
+    .ScrollView-scroller {
+      padding-top: 12px;
+      margin-top: -12px;
+      scroll-behavior: auto;
+    }
+    .ScrollView-item {
+      margin-left: 6px;
+    }
+  }
+  &.simpleAlime-target {
+    :global {
+      .ScrollView-item {
+        margin-left: 9px;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  .skillCard {
+    position: relative;
+    padding: 10px 6px 7px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: var(--shadow-1);
+    &.simpleAlime {
+      padding: 6px 12px;
+      border-radius: 9px;
+      img {
+        width: 16px;
+        height: 16px;
+      }
+      .text {
+        margin: 0 0 0 3px;
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--gray-1);
+      }
+    }
+    // margin-left: 16px;
+    img {
+      height: 40px;
+      width: 40px;
+    }
+    .text {
+      margin-top: 7px;
+      line-height: 17px;
+      font-size: 12px;
+      color: #333333;
+      white-space: nowrap;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
+  }
+
+  @keyframes b {
+    50% {
+      // 8px
+      width: 8px;
+      animation-timing-function: cubic-bezier(0, 2.5, 1, 2.5);
+    }
+    100% {
+      width: 10px;
+    }
+  }
+  .redDotCircle {
+    position: absolute;
+    top: 9px;
+    right: 12px;
+    background-image: linear-gradient(-52deg, #EC0026 4%, #FF585A 94%);
+    border: 2px solid #FFFFFF;
+    height: 12px;
+    width: 12px;
+    border-radius: 100%;
+  }
+
+  .redDot {
+    position: absolute;
+    left: 33px;
+    top: 5px;
+    height: 16px;
+    background-image: linear-gradient(-52deg, #ec0026 4%, #ff585a 94%);
+    border-radius: 10px;
+    border-bottom-left-radius: 3px;
+    line-height: 16px;
+    box-shadow: 0px 1.5px 4.5px rgba(255, 0, 27, 0.4);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    .textDot {
+      font-size: 10px;
+      margin: 0 5px;
+      width: 40px;
+      color: white;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+  .animation {
+    animation: 0.5s cubic-bezier(0, 0.6, 1, 1.2) 1 b;
+    animation-fill-mode: forwards;
+  }
+}
+
+
+:global(.ChatApp[data-elder-mode='true']) {
+  .skill-card-group-homepage {
+    .skillCard {
+      padding: 12Px 7.2Px 8.4Px;
+      border-radius: 14.4Px;
+      box-shadow: 0 2Px 4Px 2px rgba(0,0,0,0.02);
+      // box-shadow: 2Px 2Px 6Px 0 rgb(0 0 0 / 12%);
+      margin-bottom: 4Px;
+      img {
+        height: 48Px;
+        width: 48Px;
+      }
+      .text {
+        margin-top: 9.4Px;
+        line-height: 20.4Px;
+        font-size: 14.4Px;
+      }
+    }
+  }
+}
+
+.scrollBehaviorAuto {
+  scroll-behavior: auto;
+}
