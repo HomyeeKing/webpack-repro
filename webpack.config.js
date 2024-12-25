@@ -3,8 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // webpack.config.js
 const cssnano = require('cssnano');
 const autoprefixer = require('autoprefixer');
-// const VirtualPlugin = require('./plugins/virtualPlugin');
-const VirtualPlugin = require('./unplugins/virtualPlugin');
+const VirtualPlugin = require('./plugins/virtualPlugin');
+// const VirtualPlugin = require('./unplugins/virtualPlugin');
 
 const toPascalCase = (str) =>
   str
@@ -61,10 +61,7 @@ module.exports = {
   },
 
   plugins: [
-    VirtualPlugin.webpack(),
-    // new VirtualPlugin({
-    //   'virtual:test': 'export const a = 1;',
-    // }),
+    new VirtualPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html', // 使用的 HTML 模板
     }),
