@@ -1,8 +1,12 @@
 import styles from './style.less';
 import * as lodash from 'lodash-es';
-import { a } from 'virtual:test';
-console.log('a', a);
+import testJson from 'virtual:test';
+import { bar } from './another-module';
+import foo from './foo';
+console.log('foo', foo);
 
+console.log('testJson', testJson);
+console.log('bar', bar);
 console.log('lodash', lodash);
 const element = document.createElement('div');
 element.className = styles['skill-card-group-homepage']; // 使用 CSS Modules 中的类名

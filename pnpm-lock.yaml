@@ -8,9 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@swc/helpers':
+        specifier: ^0.5.15
+        version: 0.5.15
       lodash-es:
         specifier: ^4.17.21
         version: 4.17.21
+      tapable:
+        specifier: ^2.2.1
+        version: 2.2.1
       unplugin:
         specifier: ^2.1.0
         version: 2.1.0
@@ -51,6 +57,9 @@ importers:
       webpack-dev-server:
         specifier: ^5.1.0
         version: 5.1.0(webpack-cli@5.1.4)(webpack@5.95.0)
+      webpack-virtual-modules:
+        specifier: ^0.6.2
+        version: 0.6.2
 
 packages:
 
@@ -111,6 +120,9 @@ packages:
 
   '@leichtgewicht/ip-codec@2.0.5':
     resolution: {integrity: sha512-Vo+PSpZG2/fmgmiNzYK9qWRh8h/CHrwD0mo1h1DzL4yzHNSfWYujGTYsWGreD000gcgmZ7K4Ys6Tx9TxtsKdDw==}
+
+  '@swc/helpers@0.5.15':
+    resolution: {integrity: sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==}
 
   '@trysound/sax@0.2.0':
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
@@ -1744,6 +1756,9 @@ packages:
   tslib@2.7.0:
     resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
 
+  tslib@2.8.1:
+    resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
+
   type-is@1.6.18:
     resolution: {integrity: sha512-TkRKr9sUTxEH8MdfuCSP7VizJyzRNMjj2J2do2Jr3Kym598JVdEksuzPQCnlFPW4ky9Q+iA+ma9BGm06XQBy8g==}
     engines: {node: '>= 0.6'}
@@ -1942,6 +1957,10 @@ snapshots:
       tslib: 2.7.0
 
   '@leichtgewicht/ip-codec@2.0.5': {}
+
+  '@swc/helpers@0.5.15':
+    dependencies:
+      tslib: 2.8.1
 
   '@trysound/sax@0.2.0': {}
 
@@ -3629,6 +3648,8 @@ snapshots:
       tslib: 2.7.0
 
   tslib@2.7.0: {}
+
+  tslib@2.8.1: {}
 
   type-is@1.6.18:
     dependencies:
