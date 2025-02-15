@@ -2,7 +2,9 @@
   "name": "webpack-repro",
   "version": "1.0.0",
   "main": "index.js",
-  "sideEffects": ["./src/index.js"],
+  "sideEffects": [
+    "./src/index.js"
+  ],
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack serve --mode development",
@@ -28,7 +30,7 @@
     "less-loader": "^8.1.1",
     "postcss-loader": "^5.2.0",
     "style-loader": "^2.0.0",
-    "terser": "^5.37.0",
+    "terser": "^5.39.0",
     "terser-webpack-plugin": "^5.3.11",
     "val-loader": "^6.0.0",
     "webpack": "^5.95.0",

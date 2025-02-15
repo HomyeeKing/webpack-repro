@@ -2,7 +2,7 @@ const dynamicModules = await import(
   /* webpackChunkName: "dynamic-modules" */ './dynamic-modules.mjs'
 );
 
-console.log('dynamicModules', dynamicModules);
+// console.log('dynamicModules', dynamicModules);
 const documentOnly = false,
   isDowngradeToCsr = true,
   disableOnErrorDowngrade = false;
